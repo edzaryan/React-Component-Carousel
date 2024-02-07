@@ -35,12 +35,16 @@ const Slider = ({ data }) => {
 
     return (
         <div className={styles.slider}>
-            <SliderButton style={{ left: "-25px" }} onClick={() => move("LEFT")}>
-                <FontAwesomeIcon icon={faChevronLeft} />
-            </SliderButton>
-            <SliderButton style={{ right: "-25px" }} onClick={() => move("RIGHT")}>
-                <FontAwesomeIcon icon={faChevronRight} />
-            </SliderButton>
+            {data.length > 5 && (
+                <>
+                    <SliderButton style={{ left: "-25px" }} onClick={() => move("LEFT")}>
+                        <FontAwesomeIcon icon={faChevronLeft} />
+                    </SliderButton>
+                    <SliderButton style={{ right: "-25px" }} onClick={() => move("RIGHT")}>
+                        <FontAwesomeIcon icon={faChevronRight} />
+                    </SliderButton>
+                </>
+            )}
             <div className={styles.sliderBlock} ref={blockRef}>
                 <div className={styles.innerBlock} style={{ transform: `translateX(${currentPosition}px)` }} ref={innerBlockRef}>
                     {
