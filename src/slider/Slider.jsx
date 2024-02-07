@@ -20,12 +20,6 @@ const Slider = ({ data }) => {
         }
     }, [data]);
 
-    useEffect(() => {
-        console.log("innerBlockWidth: " + innerBlockWidth);
-        console.log("blockWidth: " + blockWidth);
-        console.log("currentPosition: " + currentPosition);
-    }, [currentPosition, blockWidth, innerBlockWidth]);
-
     const move = direction => {
         const remainingSpaceStart = currentPosition;
 
