@@ -25,14 +25,11 @@ const Slider = ({ data }) => {
 
         const remainingSpaceEnd = innerBlockWidth - Math.abs(currentPosition) - blockWidth;
 
-        let distanceToMove = blockWidth + 20;
-
         if (direction === "LEFT" && remainingSpaceStart < 0) {
-            distanceToMove = Math.min(Math.abs(remainingSpaceStart), blockWidth + 20);
-            setCurrentPosition(prevPosition => prevPosition + distanceToMove);
-        } else if (direction === "RIGHT" && remainingSpaceEnd > 0) {
-            distanceToMove = Math.min(remainingSpaceEnd, blockWidth + 20);
-            setCurrentPosition(prevPosition => prevPosition - distanceToMove);
+            setCurrentPosition(prevPosition => prevPosition + Math.min(Math.abs(remainingSpaceStart), blockWidth + 20));
+        }
+        else if (direction === "RIGHT" && remainingSpaceEnd > 0) {
+            setCurrentPosition(prevPosition => prevPosition - Math.min(remainingSpaceEnd, blockWidth + 20));
         }
     }
 
@@ -45,9 +42,7 @@ const Slider = ({ data }) => {
                 <FontAwesomeIcon icon={faChevronRight} />
             </SliderButton>
             <div className={styles.sliderBlock} ref={blockRef}>
-                <div className={styles.innerBlock}
-                     style={{ transform: `translateX(${currentPosition}px)` }}
-                     ref={innerBlockRef}>
+                <div className={styles.innerBlock} style={{ transform: `translateX(${currentPosition}px)` }} ref={innerBlockRef}>
                     {
                         data.map(song => <SliderItem key={song.id} {...song} />)
                     }

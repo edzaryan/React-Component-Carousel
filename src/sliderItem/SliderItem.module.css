@@ -20,10 +20,24 @@
     display: flex;
     flex-flow: column;
     gap: 5px;
+    cursor: pointer;
 }
 
+.songName {
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.songName:hover {
+    color: #4b4b4b;
+}
 
 .songAlbum {
     font-size: 14px;
-    color: #999999; 
+    color: #999999;
+    transition: 0.2s;
+}
+
+.songAlbum:hover {
+    color: #525252;
 }
