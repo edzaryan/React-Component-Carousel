@@ -1,0 +1,18 @@
+
+.slider {
+    width: 1080px;
+    position: relative;
+}
+
+.sliderBlock {
+    overflow: hidden;
+    position: relative;
+}
+
+.innerBlock {
+    display: inline-flex;
+    gap: 20px;
+    position: relative;
+    transition: 0.2s;
+}
+

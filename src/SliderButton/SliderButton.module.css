@@ -1,0 +1,23 @@
+
+.button {
+    position: absolute;
+    z-index: 1000;
+    top: 100px;
+    transform: translateY(-50%);
+    background-color: #f8f8f8;
+    border: 1px solid #c7c7c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    color: #7a7a7a;
+}
+
+.button:hover {
+    transition: 0.1s;
+    color: #525252;
+    border: 1px solid #757575;
+}

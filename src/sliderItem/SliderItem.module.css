@@ -1,0 +1,29 @@
+
+.sliderItem {
+    display: flex;
+    flex-flow: column;
+    gap: 8px;
+}
+
+.sliderItemImage {
+    width: 200px;
+    height: 200px;
+    background-color: #cccccc;
+    cursor: pointer;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.info {
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+}
+
+
+.songAlbum {
+    font-size: 14px;
+    color: #999999; 
+}
